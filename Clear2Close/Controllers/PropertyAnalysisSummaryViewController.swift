@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+/*
+ 1. ViewController will display all analysis info, with some editable interest fields
+ 2. Calculations and view decoration will be handled by AnalysisService
+ */

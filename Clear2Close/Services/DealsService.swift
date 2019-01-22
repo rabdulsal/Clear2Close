@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+/*
+ Service will manage arrays of C2CDeals, bucket them and decorate MyPropertiesVC
+ */

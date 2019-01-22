@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class C2CAnalysisService {
+    enum Categories : String {
+        case HardMoney = "hardmoney"
+        case Taxes = "taxes"
+        case Insurance = "insurance"
+        case Closing = "closing"
+    }
+}
