@@ -75,11 +75,11 @@ class CreatePropertyTypeViewController : UIViewController {
             let seg = PropertySegueID(rawValue: identifier) else { return }
         switch seg {
         case .Rental:
-            let createPropertyVC = segue.destination as! RentalAnalysisViewController
+            let createPropertyVC = segue.destination as! EditRentalAnalysisViewController
             createPropertyVC.property = self.property
         case .Flip:
             // TODO: May eventually create a completely separate VC type for Flip properties
-            let createPropertyVC = segue.destination as! RentalAnalysisViewController
+            let createPropertyVC = segue.destination as! EditRentalAnalysisViewController
             createPropertyVC.property = self.property
         }
     }
