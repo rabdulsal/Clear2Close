@@ -378,8 +378,14 @@
                     <navigationItem key="navigationItem" title="Rental" id="Q26-Af-I9u"/>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
+                        <outlet property="appraisalField" destination="DpD-fD-hJD" id="Uwg-gQ-rF4"/>
                         <outlet property="continueButton" destination="ZAT-QH-eap" id="WHF-i6-gEd"/>
+                        <outlet property="interestField" destination="D5u-y0-b9k" id="MN9-F8-BoT"/>
+                        <outlet property="pointsField" destination="6ff-OQ-WUK" id="ghW-Gg-1Fc"/>
                         <outlet property="propertyAddress" destination="Ell-oP-Fyx" id="9hq-Wl-ahi"/>
+                        <outlet property="purchaseField" destination="pM3-Hy-Eqh" id="IMj-KN-XtS"/>
+                        <outlet property="rehabField" destination="RQk-qW-Ilq" id="Edh-9a-ArR"/>
+                        <outlet property="termsField" destination="uWT-Zv-LmQ" id="e6h-fi-opY"/>
                         <segue destination="T5j-JT-6Q2" kind="show" identifier="PreviewPropID" id="Xxy-dX-3eM"/>
                     </connections>
                 </viewController>
@@ -418,7 +424,7 @@
                                     </constraints>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="hVb-OQ-CKn" userLabel="Footer View">
-                                    <rect key="frame" x="0.0" y="143" width="375" height="50"/>
+                                    <rect key="frame" x="0.0" y="177" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lmf-wg-x81">
@@ -441,12 +447,33 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Y1a-FF-ZyH">
-                                        <rect key="frame" x="0.0" y="99" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="78" id="Y1a-FF-ZyH">
+                                        <rect key="frame" x="0.0" y="99" width="375" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y1a-FF-ZyH" id="ShC-uM-uvt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="77.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1X-wy-MeJ" userLabel="Title Label">
+                                                    <rect key="frame" x="16" y="11" width="33.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOm-c7-rsM" userLabel="Description Label">
+                                                    <rect key="frame" x="16" y="40" width="88" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="r1X-wy-MeJ" firstAttribute="top" secondItem="ShC-uM-uvt" secondAttribute="top" constant="11" id="1P9-iG-DZS"/>
+                                                <constraint firstItem="YOm-c7-rsM" firstAttribute="leading" secondItem="r1X-wy-MeJ" secondAttribute="leading" id="4qe-gp-GLr"/>
+                                                <constraint firstAttribute="bottom" secondItem="YOm-c7-rsM" secondAttribute="bottom" constant="8" id="IBr-BK-J3n"/>
+                                                <constraint firstItem="r1X-wy-MeJ" firstAttribute="leading" secondItem="ShC-uM-uvt" secondAttribute="leading" constant="16" id="IHg-E0-qzL"/>
+                                                <constraint firstItem="YOm-c7-rsM" firstAttribute="top" secondItem="r1X-wy-MeJ" secondAttribute="bottom" constant="8" id="c3X-cM-gfZ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>

@@ -21,14 +21,34 @@ class PreviewPropertyAnalysisViewController : UIViewController {
     @IBOutlet weak var propertyTableView : UITableView!
     
     var property: C2CProperty!
+    var dealViewModel: C2CPropertyAnalysisModel!
     
     override func viewDidLoad() {
         self.title = "Preview Analysis"
         self.propertyAddressLabel.text = self.property.address
+        self.propertyTableView.delegate = self
+        self.propertyTableView.dataSource = self
     }
     
     @IBAction func pressedContinueButton(_ sender: Any) {
         
     }
+    
+}
+
+extension PreviewPropertyAnalysisViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dealViewModel.rowCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        return UITableViewCell()
+    }
+}
+
+extension PreviewPropertyAnalysisViewController : UITableViewDataSource {
+    
     
 }

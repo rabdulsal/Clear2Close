@@ -23,6 +23,7 @@
 		4C3FFE8421F022380054DF35 /* AnalysisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3FFE8321F022380054DF35 /* AnalysisService.swift */; };
 		4C3FFE8621F022570054DF35 /* Deal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3FFE8521F022570054DF35 /* Deal.swift */; };
 		4C3FFE8821F022630054DF35 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3FFE8721F022630054DF35 /* Property.swift */; };
+		4C3FFE8A21F8DE040054DF35 /* C2CPropertyAnalysisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3FFE8921F8DE040054DF35 /* C2CPropertyAnalysisViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		4C3FFE8321F022380054DF35 /* AnalysisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisService.swift; sourceTree = "<group>"; };
 		4C3FFE8521F022570054DF35 /* Deal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deal.swift; sourceTree = "<group>"; };
 		4C3FFE8721F022630054DF35 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		4C3FFE8921F8DE040054DF35 /* C2CPropertyAnalysisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C2CPropertyAnalysisViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			children = (
 				4C3FFE8521F022570054DF35 /* Deal.swift */,
 				4C3FFE8721F022630054DF35 /* Property.swift */,
+				4C3FFE8921F8DE040054DF35 /* C2CPropertyAnalysisViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				3A4263C321F643100035AA18 /* MyPropertiesViewController.swift in Sources */,
 				4C3FFE8821F022630054DF35 /* Property.swift in Sources */,
 				3A4DB0E221F7B7C800CCD049 /* EditPropertyAnalysisViewController.swift in Sources */,
+				4C3FFE8A21F8DE040054DF35 /* C2CPropertyAnalysisViewModel.swift in Sources */,
 				4C3FFE8621F022570054DF35 /* Deal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
