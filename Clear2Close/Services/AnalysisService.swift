@@ -9,6 +9,11 @@
 import Foundation
 
 class C2CAnalysisService {
+    
+    /*
+     Serves as ViewModel for PropertySummaryViewController
+    */
+    
     enum Categories : String {
         case HardMoney = "hardmoney"
         case Taxes = "taxes"

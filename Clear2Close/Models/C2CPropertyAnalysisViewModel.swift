@@ -54,27 +54,31 @@ class C2CPropertyAnalysisModel {
         self.deal = deal
     }
     
-    func makeDealHash() {
-        
-    }
-    
     func cellContentForRow(row: Int) -> DealViewModel {
         guard let title = AnalysisHash(rawValue: row) else { return DealViewModel(title: "", description: "") }
+        
+        let purchase = "$\(String.rounded(self.deal.purchasePrice))"
+        let rehab = "$\(String.rounded(self.deal.rehab))"
+        let appraisal = "$\(String.rounded(self.deal.appraisalARV))"
+        let interest = "\(String(self.deal.interestRate))%"
+        let points = "\(String(self.deal.points))%"
+        let terms = "\(String(self.deal.terms)) Months"
+        
         switch title {
         case .Funding:
             return DealViewModel(title: self.fundingTitle, description: self.deal.fundingSource.rawValue)
         case .PurchasePrice:
-            return DealViewModel(title: self.purchaseTitle, description: String(self.deal.purchasePrice))
+            return DealViewModel(title: self.purchaseTitle, description: purchase)
         case .Rehab:
-            return DealViewModel(title: self.rehabTitle, description: String(self.deal.rehab))
+            return DealViewModel(title: self.rehabTitle, description: rehab)
         case .AppraisalARV:
-            return DealViewModel(title: self.interestTitle, description: String(self.deal.interestRate))
+            return DealViewModel(title: self.appraisalTitle, description: appraisal)
         case .Interest:
-            return DealViewModel(title: self.interestTitle, description: String(self.deal.interestRate))
+            return DealViewModel(title: self.interestTitle, description: interest)
         case .Points:
-            return DealViewModel(title: self.pointsTitle, description: String(self.deal.points))
+            return DealViewModel(title: self.pointsTitle, description: points)
         case .Terms:
-            return DealViewModel(title: self.termsTitle, description: String(self.deal.terms))
+            return DealViewModel(title: self.termsTitle, description: terms)
         }
     }
     

@@ -447,7 +447,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="78" id="Y1a-FF-ZyH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PreviewCell" rowHeight="78" id="Y1a-FF-ZyH" customClass="PreviewAnalysisCell" customModule="Clear2Close" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="99" width="375" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y1a-FF-ZyH" id="ShC-uM-uvt">
@@ -475,6 +475,10 @@
                                                 <constraint firstItem="YOm-c7-rsM" firstAttribute="top" secondItem="r1X-wy-MeJ" secondAttribute="bottom" constant="8" id="c3X-cM-gfZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="YOm-c7-rsM" id="pVp-xZ-VW5"/>
+                                            <outlet property="titleLabel" destination="r1X-wy-MeJ" id="LiP-81-BAb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

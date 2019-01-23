@@ -38,17 +38,19 @@ class PreviewPropertyAnalysisViewController : UIViewController {
 
 extension PreviewPropertyAnalysisViewController : UITableViewDelegate {
     
+    
+}
+
+extension PreviewPropertyAnalysisViewController : UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dealViewModel.rowCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        return UITableViewCell()
+        let cell = self.propertyTableView.dequeueReusableCell(withIdentifier: "PreviewCell", for: indexPath) as! PreviewAnalysisCell
+        cell.configure(viewModel: self.dealViewModel.cellContentForRow(row: indexPath.row))
+        return cell
     }
-}
-
-extension PreviewPropertyAnalysisViewController : UITableViewDataSource {
-    
-    
 }
