@@ -10,7 +10,12 @@ import Foundation
 
 extension String {
     
-    static func rounded(_ amount: Double) -> String {
-        return String(format: "%.2f", amount)
+    static func toDollars(_ amount: Double) -> String {
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.locale = Locale.current
+        guard let priceString = currencyFormatter.string(from: NSNumber(value: amount)) else { return "" }
+        return priceString
     }
 }

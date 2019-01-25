@@ -32,6 +32,12 @@ class PreviewPropertyAnalysisViewController : UIViewController {
     
     @IBAction func pressedContinueButton(_ sender: Any) {
         
+        self.performSegue(withIdentifier: Identifiers.SummarySegue.rawValue, sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! PropertySummaryViewController
+        destination.deal = self.dealViewModel.deal
     }
     
 }
@@ -49,8 +55,16 @@ extension PreviewPropertyAnalysisViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = self.propertyTableView.dequeueReusableCell(withIdentifier: "PreviewCell", for: indexPath) as! PreviewAnalysisCell
+        let cell = self.propertyTableView.dequeueReusableCell(withIdentifier: Identifiers.PreviewCell.rawValue, for: indexPath) as! PreviewAnalysisCell
         cell.configure(viewModel: self.dealViewModel.cellContentForRow(row: indexPath.row))
         return cell
+    }
+}
+
+extension PreviewPropertyAnalysisViewController {
+    
+    enum Identifiers : String {
+        case SummarySegue = "SummaryID"
+        case PreviewCell = "PreviewCell"
     }
 }

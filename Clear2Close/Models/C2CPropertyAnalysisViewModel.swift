@@ -57,9 +57,9 @@ class C2CPropertyAnalysisModel {
     func cellContentForRow(row: Int) -> DealViewModel {
         guard let title = AnalysisHash(rawValue: row) else { return DealViewModel(title: "", description: "") }
         
-        let purchase = "$\(String.rounded(self.deal.purchasePrice))"
-        let rehab = "$\(String.rounded(self.deal.rehab))"
-        let appraisal = "$\(String.rounded(self.deal.appraisalARV))"
+        let purchase = String.toDollars(self.deal.purchasePrice)
+        let rehab = String.toDollars(self.deal.rehab)
+        let appraisal = String.toDollars(self.deal.appraisalARV)
         let interest = "\(String(self.deal.interestRate))%"
         let points = "\(String(self.deal.points))%"
         let terms = "\(String(self.deal.terms)) Months"
