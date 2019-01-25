@@ -14,8 +14,7 @@ class C2CPropertyAnalysisModel {
         var description: String
         
         init(title: String, description: String) {
-            self.title = title
-            self.description = description
+            self.title = title; self.description = description
         }
     }
     

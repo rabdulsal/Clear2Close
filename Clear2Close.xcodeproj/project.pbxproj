@@ -10,6 +10,8 @@
 		3A4263C321F643100035AA18 /* MyPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4263C221F643100035AA18 /* MyPropertiesViewController.swift */; };
 		3A4DB0E021F657BB00CCD049 /* CreatePropertyTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4DB0DF21F657BB00CCD049 /* CreatePropertyTypeViewController.swift */; };
 		3A4DB0E221F7B7C800CCD049 /* EditPropertyAnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4DB0E121F7B7C800CCD049 /* EditPropertyAnalysisViewController.swift */; };
+		3AB5272221FB5DD800E50E2E /* UIButton+Clear2Close.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB5272121FB5DD800E50E2E /* UIButton+Clear2Close.swift */; };
+		3AB5272421FB61E200E50E2E /* UIColor+Clear2Close.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB5272321FB61E200E50E2E /* UIColor+Clear2Close.swift */; };
 		4C3FFE4C21EFE4840054DF35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3FFE4B21EFE4840054DF35 /* AppDelegate.swift */; };
 		4C3FFE4E21EFE4840054DF35 /* PropertySummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3FFE4D21EFE4840054DF35 /* PropertySummaryViewController.swift */; };
 		4C3FFE5121EFE4840054DF35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3FFE4F21EFE4840054DF35 /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 		3A4263C221F643100035AA18 /* MyPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPropertiesViewController.swift; sourceTree = "<group>"; };
 		3A4DB0DF21F657BB00CCD049 /* CreatePropertyTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePropertyTypeViewController.swift; sourceTree = "<group>"; };
 		3A4DB0E121F7B7C800CCD049 /* EditPropertyAnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPropertyAnalysisViewController.swift; sourceTree = "<group>"; };
+		3AB5272121FB5DD800E50E2E /* UIButton+Clear2Close.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Clear2Close.swift"; sourceTree = "<group>"; };
+		3AB5272321FB61E200E50E2E /* UIColor+Clear2Close.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Clear2Close.swift"; sourceTree = "<group>"; };
 		4C3FFE4821EFE4840054DF35 /* Clear2Close.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clear2Close.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3FFE4B21EFE4840054DF35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C3FFE4D21EFE4840054DF35 /* PropertySummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySummaryViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				4C3FFE8E21F910890054DF35 /* String+Clear2Close.swift */,
+				3AB5272121FB5DD800E50E2E /* UIButton+Clear2Close.swift */,
+				3AB5272321FB61E200E50E2E /* UIColor+Clear2Close.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -349,7 +355,9 @@
 				4C3FFE8F21F910890054DF35 /* String+Clear2Close.swift in Sources */,
 				4C3FFE8221F022260054DF35 /* DealsService.swift in Sources */,
 				3A4263C321F643100035AA18 /* MyPropertiesViewController.swift in Sources */,
+				3AB5272221FB5DD800E50E2E /* UIButton+Clear2Close.swift in Sources */,
 				4C3FFE8C21F8EE7F0054DF35 /* PreviewAnalysisCell.swift in Sources */,
+				3AB5272421FB61E200E50E2E /* UIColor+Clear2Close.swift in Sources */,
 				4C3FFE8821F022630054DF35 /* Property.swift in Sources */,
 				3A4DB0E221F7B7C800CCD049 /* EditPropertyAnalysisViewController.swift in Sources */,
 				4C3FFE8A21F8DE040054DF35 /* C2CPropertyAnalysisViewModel.swift in Sources */,

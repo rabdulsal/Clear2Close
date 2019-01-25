@@ -34,12 +34,25 @@ class EditRentalAnalysisViewController : UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let identifier = segue.identifier else { return }
         let previewPropertyVC = segue.destination as! PreviewPropertyAnalysisViewController
         previewPropertyVC.property = self.property
         previewPropertyVC.dealViewModel = C2CPropertyAnalysisModel(deal: self.deal)
-        
     }
+    
+    // MARK: ACTIONS
+    
+    @IBAction func pressedHardMoney(_ sender: Any) {
+        self.fundingSource = .HardMoney
+    }
+    
+    @IBAction func pressedPrivate(_ sender: Any) {
+        self.fundingSource = .Private
+    }
+    
+    @IBAction func pressedCash(_ sender: Any) {
+        self.fundingSource = .Cash
+    }
+    
     
     @IBAction func pressedContinueButton(_ sender: Any) {
         guard
