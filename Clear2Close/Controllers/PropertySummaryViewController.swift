@@ -27,6 +27,11 @@ class PropertySummaryViewController: UIViewController {
         self.analysisService = C2CAnalysisService.init(deal: self.deal, tableView: self.summaryTableView)
     }
 
+    @IBAction func pressedSaveButton(_ sender: Any) {
+        // Set analysisService
+        self.analysisService.saveDealtoCache()
+    }
+    
 
 }
 

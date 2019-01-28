@@ -111,6 +111,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="myPropertiesTableView" destination="LvL-rg-kqB" id="2hM-By-nyz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -738,6 +741,9 @@
                                                 <constraint firstAttribute="height" constant="50" id="KEY-fu-Ads"/>
                                             </constraints>
                                             <state key="normal" title="Save"/>
+                                            <connections>
+                                                <action selector="pressedSaveButton:" destination="ub7-F1-que" eventType="touchUpInside" id="c6I-N9-IAI"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -13,7 +13,7 @@ import UIKit
 
 class C2CAnalysisService {
     
-    /*
+    /*k
      Serves as ViewModel for PropertySummaryViewController
     */
     
@@ -197,6 +197,12 @@ class C2CAnalysisService {
             cell.configure(rowContent: rowData)
             return cell
         }
+    }
+    
+    func saveDealtoCache() {
+        // Save to CoreData
+        
+        C2CDealsService.saveDealToCache(self.deal)
     }
 }
 
