@@ -28,6 +28,8 @@ class CreatePropertyTypeViewController : UIViewController {
     }
     
     @IBOutlet weak var addressField: UITextField!
+    @IBOutlet weak var rentalButton : CircularButton!
+    @IBOutlet weak var flipButton: CircularButton!
     
     var property: C2CProperty!
     var propertySegue: PropertySegueID!
@@ -35,10 +37,12 @@ class CreatePropertyTypeViewController : UIViewController {
     
     @IBAction func pressedRentalButton(_ sender: Any) {
         self.propertySegue = .Rental
+        self.rentalButton.toggleSelected()
     }
     
     @IBAction func pressedFlipButton(_ sender: Any) {
         self.propertySegue = .Flip
+        self.flipButton.toggleSelected()
     }
     
     

@@ -21,7 +21,10 @@ class EditRentalAnalysisViewController : UIViewController {
     @IBOutlet weak var interestField: UITextField!
     @IBOutlet weak var pointsField: UITextField!
     @IBOutlet weak var termsField: UITextField!
-    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var continueButton: PrimaryCTAButton!
+    @IBOutlet weak var hardMoneyButton: CircularButton!
+    @IBOutlet weak var privateMoneyButton: CircularButton!
+    @IBOutlet weak var cashButton: CircularButton!
     
     let segueID = "PreviewPropID"
     var property: C2CProperty!
@@ -43,14 +46,17 @@ class EditRentalAnalysisViewController : UIViewController {
     
     @IBAction func pressedHardMoney(_ sender: Any) {
         self.fundingSource = .HardMoney
+        self.hardMoneyButton.toggleSelected()
     }
     
     @IBAction func pressedPrivate(_ sender: Any) {
         self.fundingSource = .Private
+        self.privateMoneyButton.toggleSelected()
     }
     
     @IBAction func pressedCash(_ sender: Any) {
         self.fundingSource = .Cash
+        self.cashButton.toggleSelected()
     }
     
     

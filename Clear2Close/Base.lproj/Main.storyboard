@@ -133,22 +133,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eku-E1-8Mv">
-                                <rect key="frame" x="16" y="240" width="44" height="30"/>
-                                <state key="normal" title="Rental"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eku-E1-8Mv" customClass="CircularButton" customModule="Clear2Close" customModuleProvider="target">
+                                <rect key="frame" x="16" y="240" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="sk1-BI-rlt"/>
+                                    <constraint firstAttribute="height" constant="70" id="xyg-iP-0RF"/>
+                                </constraints>
+                                <state key="normal" title="Rental">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="pressedRentalButton:" destination="C41-gX-pmI" eventType="touchUpInside" id="bxk-ky-nZN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYi-OD-VO9">
-                                <rect key="frame" x="329" y="240" width="30" height="30"/>
-                                <state key="normal" title="Filp"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYi-OD-VO9" customClass="CircularButton" customModule="Clear2Close" customModuleProvider="target">
+                                <rect key="frame" x="289" y="240" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="hv4-QO-ofG"/>
+                                    <constraint firstAttribute="width" constant="70" id="prX-je-ggS"/>
+                                </constraints>
+                                <state key="normal" title="Filp">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="pressedFlipButton:" destination="C41-gX-pmI" eventType="touchUpInside" id="jBs-Xc-C0a"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9G-I9-9Cb" customClass="PrimaryCTAButton" customModule="Clear2Close" customModuleProvider="target">
-                                <rect key="frame" x="20" y="300" width="335" height="50"/>
+                                <rect key="frame" x="20" y="340" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="jNj-pm-xYg"/>
                                 </constraints>
@@ -183,6 +195,8 @@
                     </view>
                     <connections>
                         <outlet property="addressField" destination="AUT-SU-geT" id="KOq-m5-PzV"/>
+                        <outlet property="flipButton" destination="aYi-OD-VO9" id="8yn-gK-PlY"/>
+                        <outlet property="rentalButton" destination="Eku-E1-8Mv" id="VnZ-35-cPu"/>
                         <segue destination="onM-2v-9ZV" kind="show" identifier="FlipID" id="89d-1a-dHa"/>
                         <segue destination="9s4-kp-vCw" kind="show" identifier="RentalID" id="9IY-w0-QpF"/>
                     </connections>
@@ -221,7 +235,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="749"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0E-GZ-hxW" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="742"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="782"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Property Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ell-oP-Fyx">
                                                 <rect key="frame" x="121" y="20" width="133.5" height="21"/>
@@ -244,29 +258,47 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHZ-nq-sDO">
-                                                <rect key="frame" x="16" y="395" width="84" height="30"/>
-                                                <state key="normal" title="Hard Money"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cHZ-nq-sDO" customClass="CircularButton" customModule="Clear2Close" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="395" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="Kob-L5-uu7"/>
+                                                    <constraint firstAttribute="width" constant="70" id="OuL-Qk-JtB"/>
+                                                </constraints>
+                                                <state key="normal" title="Hard Money">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="pressedHardMoney:" destination="9s4-kp-vCw" eventType="touchUpInside" id="JfC-H4-cl0"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBl-oz-RcC">
-                                                <rect key="frame" x="163.5" y="395" width="48" height="30"/>
-                                                <state key="normal" title="Private"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBl-oz-RcC" customClass="CircularButton" customModule="Clear2Close" customModuleProvider="target">
+                                                <rect key="frame" x="152.5" y="395" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Roi-3e-0Tm"/>
+                                                    <constraint firstAttribute="height" constant="70" id="cWl-M1-3ue"/>
+                                                </constraints>
+                                                <state key="normal" title="Private">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="pressedPrivate:" destination="9s4-kp-vCw" eventType="touchUpInside" id="TV8-am-eEa"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peK-GO-UoO">
-                                                <rect key="frame" x="324" y="395" width="35" height="30"/>
-                                                <state key="normal" title="Cash"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peK-GO-UoO" customClass="CircularButton" customModule="Clear2Close" customModuleProvider="target">
+                                                <rect key="frame" x="289" y="395" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="7ua-XG-zPR"/>
+                                                    <constraint firstAttribute="width" constant="70" id="Vdw-iL-f7Z"/>
+                                                </constraints>
+                                                <state key="normal" title="Cash">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="pressedCash:" destination="9s4-kp-vCw" eventType="touchUpInside" id="htz-C3-04Y"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAT-QH-eap" customClass="PrimaryCTAButton" customModule="Clear2Close" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="672" width="343" height="50"/>
+                                                <rect key="frame" x="16" y="712" width="343" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="LqG-xu-OgX"/>
                                                 </constraints>
@@ -300,7 +332,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Interest Rate (%)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D5u-y0-b9k">
-                                                <rect key="frame" x="16" y="454" width="343" height="50"/>
+                                                <rect key="frame" x="16" y="494" width="343" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="c5m-zu-BNB"/>
                                                 </constraints>
@@ -309,7 +341,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Points (%)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ff-OQ-WUK">
-                                                <rect key="frame" x="16" y="528" width="343" height="50"/>
+                                                <rect key="frame" x="16" y="568" width="343" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="ZNe-fb-hV7"/>
                                                 </constraints>
@@ -318,7 +350,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Terms (Months)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uWT-Zv-LmQ">
-                                                <rect key="frame" x="16" y="602" width="343" height="50"/>
+                                                <rect key="frame" x="16" y="642" width="343" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="AEp-Pq-73N"/>
                                                 </constraints>
@@ -388,9 +420,12 @@
                     <size key="freeformSize" width="375" height="813"/>
                     <connections>
                         <outlet property="appraisalField" destination="DpD-fD-hJD" id="Uwg-gQ-rF4"/>
+                        <outlet property="cashButton" destination="peK-GO-UoO" id="rXn-gX-4cD"/>
                         <outlet property="continueButton" destination="ZAT-QH-eap" id="WHF-i6-gEd"/>
+                        <outlet property="hardMoneyButton" destination="cHZ-nq-sDO" id="b58-a2-4bc"/>
                         <outlet property="interestField" destination="D5u-y0-b9k" id="MN9-F8-BoT"/>
                         <outlet property="pointsField" destination="6ff-OQ-WUK" id="ghW-Gg-1Fc"/>
+                        <outlet property="privateMoneyButton" destination="JBl-oz-RcC" id="gsD-US-SVx"/>
                         <outlet property="propertyAddress" destination="Ell-oP-Fyx" id="9hq-Wl-ahi"/>
                         <outlet property="purchaseField" destination="pM3-Hy-Eqh" id="IMj-KN-XtS"/>
                         <outlet property="rehabField" destination="RQk-qW-Ilq" id="Edh-9a-ArR"/>
