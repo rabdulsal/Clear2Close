@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PreviewAnalysisCell : UITableViewCell {
+class PreviewAnalysisCell : C2CBasicCell {
     
     @IBOutlet weak var titleLabel : UILabel!
     @IBOutlet weak var descriptionLabel : UILabel!
@@ -17,5 +17,13 @@ class PreviewAnalysisCell : UITableViewCell {
     func configure(viewModel: C2CPropertyAnalysisModel.DealViewModel) {
         self.titleLabel.text = viewModel.title
         self.descriptionLabel.text = viewModel.description
+    }
+}
+
+class C2CBasicCell : UITableViewCell {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.selectionStyle = .none
     }
 }

@@ -75,6 +75,6 @@ private extension MyPropertiesViewController {
     
     enum Identifiers : String {
         case SegueID = "PropSummaryID"
-        case DealsID = "DealsID"
+        case DealsID = "DealsCell"
     }
 }

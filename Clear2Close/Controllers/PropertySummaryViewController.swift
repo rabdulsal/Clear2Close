@@ -18,13 +18,25 @@ class PropertySummaryViewController: UIViewController {
     @IBOutlet weak var summaryTableView : UITableView!
     
     var deal: C2CDeal!
-    var analysisService : C2CAnalysisService!
+    var analysisService: C2CAnalysisService!
+    var keyboardService: C2CKeyboardService!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.keyboardService.beginObservingKeyboard()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.summaryTableView.dataSource = self
         self.analysisService = C2CAnalysisService.init(deal: self.deal, tableView: self.summaryTableView)
+        self.keyboardService = C2CKeyboardService(self.summaryTableView)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.keyboardService.endObservingKeyboard()
     }
 
     @IBAction func pressedSaveButton(_ sender: Any) {

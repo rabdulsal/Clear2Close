@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PropertySummaryViewCell : UITableViewCell {
+class PropertySummaryViewCell : C2CBasicCell {
     
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var contentAmount: UILabel!

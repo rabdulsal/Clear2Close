@@ -29,11 +29,11 @@
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DealsCell" rowHeight="30" id="A4D-A8-6p7">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="30"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DealsCell" rowHeight="40" id="A4D-A8-6p7">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A4D-A8-6p7" id="Y20-je-qoH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="29.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -181,11 +181,11 @@
             <objects>
                 <viewController id="9s4-kp-vCw" customClass="EditRentalAnalysisViewController" customModule="Clear2Close" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2re-pb-fVK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQM-ps-M90">
-                                <rect key="frame" x="0.0" y="64" width="375" height="749"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="786"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0E-GZ-hxW" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="782"/>
@@ -202,7 +202,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Purchase Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pM3-Hy-Eqh">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Purchase Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pM3-Hy-Eqh" customClass="C2CNumericField" customModule="Clear2Close" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="113" width="343" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="hBi-o6-5Bw"/>
@@ -260,7 +260,7 @@
                                                     <action selector="pressedContinueButton:" destination="9s4-kp-vCw" eventType="touchUpInside" id="7ec-PE-71o"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Rehab" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RQk-qW-Ilq">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Rehab" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RQk-qW-Ilq" customClass="C2CNumericField" customModule="Clear2Close" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="187" width="343" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="zYM-bY-F3c"/>
@@ -269,7 +269,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Appraisal ARV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DpD-fD-hJD">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Appraisal ARV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DpD-fD-hJD" customClass="C2CNumericField" customModule="Clear2Close" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="261" width="343" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="q1R-o1-tlu"/>
@@ -284,7 +284,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Interest Rate (%)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D5u-y0-b9k">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Interest Rate (%)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D5u-y0-b9k" customClass="C2CNumericField" customModule="Clear2Close" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="494" width="343" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="c5m-zu-BNB"/>
@@ -293,7 +293,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Points (%)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ff-OQ-WUK">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Points (%)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ff-OQ-WUK" customClass="C2CNumericField" customModule="Clear2Close" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="568" width="343" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="ZNe-fb-hV7"/>
@@ -302,7 +302,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Terms (Months)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uWT-Zv-LmQ">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Terms (Months)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uWT-Zv-LmQ" customClass="C2CNumericField" customModule="Clear2Close" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="642" width="343" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="AEp-Pq-73N"/>
@@ -370,7 +370,7 @@
                         <viewLayoutGuide key="safeArea" id="3R8-Yw-EVn"/>
                     </view>
                     <navigationItem key="navigationItem" title="Rental" id="Q26-Af-I9u"/>
-                    <size key="freeformSize" width="375" height="813"/>
+                    <size key="freeformSize" width="375" height="850"/>
                     <connections>
                         <outlet property="appraisalField" destination="DpD-fD-hJD" id="Uwg-gQ-rF4"/>
                         <outlet property="cashButton" destination="peK-GO-UoO" id="rXn-gX-4cD"/>
@@ -382,6 +382,7 @@
                         <outlet property="propertyAddress" destination="Ell-oP-Fyx" id="9hq-Wl-ahi"/>
                         <outlet property="purchaseField" destination="pM3-Hy-Eqh" id="IMj-KN-XtS"/>
                         <outlet property="rehabField" destination="RQk-qW-Ilq" id="Edh-9a-ArR"/>
+                        <outlet property="scrollView" destination="kQM-ps-M90" id="abI-pw-jGE"/>
                         <outlet property="termsField" destination="uWT-Zv-LmQ" id="e6h-fi-opY"/>
                         <segue destination="T5j-JT-6Q2" kind="show" identifier="PreviewPropID" id="Xxy-dX-3eM"/>
                     </connections>
@@ -718,7 +719,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xpH-Bc-7a6">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xpH-Bc-7a6" customClass="C2CNumericField" customModule="Clear2Close" customModuleProvider="target">
                                                     <rect key="frame" x="330" y="14" width="25" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>

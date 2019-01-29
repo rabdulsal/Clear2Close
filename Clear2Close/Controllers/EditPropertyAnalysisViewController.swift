@@ -26,6 +26,9 @@ class EditRentalAnalysisViewController : UIViewController {
     @IBOutlet weak var privateMoneyButton: CircularButton!
     @IBOutlet weak var cashButton: CircularButton!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    fileprivate var keyboardService: C2CKeyboardService!
+    
     let segueID = "PreviewPropID"
     var property: C2CProperty!
     var deal: C2CDeal!
@@ -34,6 +37,17 @@ class EditRentalAnalysisViewController : UIViewController {
     override func viewDidLoad() {
         self.title = self.property.propertyType.rawValue
         self.propertyAddress.text = self.property.address
+        self.keyboardService = C2CKeyboardService(self.scrollView)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.keyboardService.beginObservingKeyboard()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.keyboardService.endObservingKeyboard()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

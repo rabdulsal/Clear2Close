@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PropertySummaryEditCell : UITableViewCell {
+class PropertySummaryEditCell : C2CBasicCell {
     
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var contentField: UITextField!
