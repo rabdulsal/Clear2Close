@@ -30,6 +30,7 @@ class PropertySummaryViewController: UIViewController {
     @IBAction func pressedSaveButton(_ sender: Any) {
         // Set analysisService
         self.analysisService.saveDealtoCache()
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
 

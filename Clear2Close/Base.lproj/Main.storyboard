@@ -29,64 +29,13 @@
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" rowHeight="97" id="A4D-A8-6p7" customClass="ContactViewCell" customModule="Clear2Close" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="97"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DealsCell" rowHeight="30" id="A4D-A8-6p7">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A4D-A8-6p7" id="Y20-je-qoH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="96.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="29.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0s-Tx-bNh" customClass="ContactNameLabel" customModule="Clear2Close" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="5" width="45" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8N-en-g8i">
-                                                    <rect key="frame" x="16" y="63" width="313" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Department" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaF-gP-aet" customClass="ContactDepartmentLabel" customModule="Clear2Close" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="34" width="343" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K05-Qh-OOH">
-                                                    <rect key="frame" x="337" y="58.5" width="30" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="1Mb-iZ-DE2"/>
-                                                        <constraint firstAttribute="width" secondItem="K05-Qh-OOH" secondAttribute="height" multiplier="1:1" id="733-bn-CvN"/>
-                                                    </constraints>
-                                                    <state key="normal" image="fav_tabbar"/>
-                                                    <state key="selected" image="fav_inapp"/>
-                                                    <connections>
-                                                        <action selector="pressedFavoritesButton:" destination="A4D-A8-6p7" eventType="touchUpInside" id="ase-QQ-bG5"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="SaF-gP-aet" secondAttribute="trailing" constant="16" id="15X-XO-Rof"/>
-                                                <constraint firstItem="K05-Qh-OOH" firstAttribute="centerY" secondItem="Z8N-en-g8i" secondAttribute="centerY" id="21X-aj-YDe"/>
-                                                <constraint firstItem="SaF-gP-aet" firstAttribute="top" secondItem="f0s-Tx-bNh" secondAttribute="bottom" constant="8" id="22l-lF-5Uv"/>
-                                                <constraint firstItem="f0s-Tx-bNh" firstAttribute="leading" secondItem="Y20-je-qoH" secondAttribute="leading" constant="16" id="BXP-Hr-CpG"/>
-                                                <constraint firstItem="Z8N-en-g8i" firstAttribute="leading" secondItem="Y20-je-qoH" secondAttribute="leading" constant="16" id="D0p-6C-5te"/>
-                                                <constraint firstItem="K05-Qh-OOH" firstAttribute="leading" secondItem="Z8N-en-g8i" secondAttribute="trailing" constant="8" id="MQJ-Cc-X4v"/>
-                                                <constraint firstAttribute="trailing" secondItem="K05-Qh-OOH" secondAttribute="trailing" constant="8" id="Z5M-gx-fjo"/>
-                                                <constraint firstItem="Z8N-en-g8i" firstAttribute="top" secondItem="SaF-gP-aet" secondAttribute="bottom" constant="5" id="h2F-Ml-WzT"/>
-                                                <constraint firstAttribute="bottom" secondItem="K05-Qh-OOH" secondAttribute="bottom" constant="8" id="n5O-c1-NI8"/>
-                                                <constraint firstItem="SaF-gP-aet" firstAttribute="leading" secondItem="Y20-je-qoH" secondAttribute="leading" constant="16" id="pum-k0-Rhx"/>
-                                                <constraint firstItem="f0s-Tx-bNh" firstAttribute="top" secondItem="Y20-je-qoH" secondAttribute="top" constant="5" id="qsL-Oy-kCf"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="departmentLabel" destination="SaF-gP-aet" id="eD0-cY-jJL"/>
-                                            <outlet property="favoritesButton" destination="K05-Qh-OOH" id="V5J-xb-kRL"/>
-                                            <outlet property="jobTitleLabel" destination="Z8N-en-g8i" id="kNQ-9a-2EP"/>
-                                            <outlet property="nameLabel" destination="f0s-Tx-bNh" id="GUt-Yk-0or"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -113,6 +62,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="myPropertiesTableView" destination="LvL-rg-kqB" id="2hM-By-nyz"/>
+                        <segue destination="ub7-F1-que" kind="show" identifier="PropSummaryID" id="5Oc-Vo-WsN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -838,11 +788,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AeB-Nt-atr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4221.6000000000004" y="-72.413793103448285"/>
+            <point key="canvasLocation" x="1810" y="-551"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="fav_inapp" width="16" height="16"/>
-        <image name="fav_tabbar" width="16" height="16"/>
-    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="5Oc-Vo-WsN"/>
+    </inferredMetricsTieBreakers>
 </document>

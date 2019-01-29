@@ -13,15 +13,15 @@ import Foundation
  2. Will manage storage and retrieval of Deals objects from CoreData
  */
 
-class C2CDealsService {
+class GroupedDeal {
+    var title: String; var dealsGroup = Array<C2CDeal>()
     
-    struct GroupedDeal {
-        var title: String; var dealsGroup = Array<C2CDeal>()
-        
-        init(_ deal: C2CDeal) {
-            self.title = deal.property.propertyType.rawValue; self.dealsGroup.append(deal)
-        }
+    init(_ deal: C2CDeal) {
+        self.title = deal.property.propertyType.rawValue; self.dealsGroup.append(deal)
     }
+}
+
+class C2CDealsService {
     
     static var allDeals = Array<C2CDeal>()
     
@@ -64,11 +64,11 @@ private extension C2CDealsService {
         let propType = deal.property.propertyType.rawValue
         if
             let dealInt = dealsTitleHash[propType],
-            var dealsGroup = dealsHash[dealInt]
+            let dealsGroup = dealsHash[dealInt]
         {
             dealsGroup.dealsGroup.append(deal)
         } else {
-            let newHashCount = dealsTitleHash.count + 1
+            let newHashCount = dealsTitleHash.count
             dealsTitleHash[propType] = newHashCount
             let dealsGroup = GroupedDeal(deal)
             self.dealsHash[newHashCount] = dealsGroup

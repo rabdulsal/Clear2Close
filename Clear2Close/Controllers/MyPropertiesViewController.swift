@@ -20,9 +20,23 @@ class MyPropertiesViewController : UIViewController {
     @IBOutlet weak var myPropertiesTableView: UITableView!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.myPropertiesTableView.dataSource = self
+        self.myPropertiesTableView.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.myPropertiesTableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        if identifier == Identifiers.SegueID.rawValue {
+            let destination = segue.destination as! PropertySummaryViewController
+            destination.deal = sender as? C2CDeal
+        }
+    }
 }
 
 extension MyPropertiesViewController : UITableViewDataSource {
@@ -40,8 +54,27 @@ extension MyPropertiesViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        guard let deal = C2CDealsService.getDealForIndexPath(indexPath) else { return UITableViewCell() }
+        let cell = self.myPropertiesTableView.dequeueReusableCell(withIdentifier: Identifiers.DealsID.rawValue, for: indexPath)
+        cell.textLabel?.text = deal.property.address
+        
+        return cell
     }
+}
+
+extension MyPropertiesViewController : UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let deal = C2CDealsService.getDealForIndexPath(indexPath)
+        self.performSegue(withIdentifier: Identifiers.SegueID.rawValue, sender: deal)
+    }
+}
+
+private extension MyPropertiesViewController {
     
+    enum Identifiers : String {
+        case SegueID = "PropSummaryID"
+        case DealsID = "DealsID"
+    }
 }
