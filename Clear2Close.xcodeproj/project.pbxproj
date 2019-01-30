@@ -33,6 +33,7 @@
 		4C3FFE8F21F910890054DF35 /* String+Clear2Close.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3FFE8E21F910890054DF35 /* String+Clear2Close.swift */; };
 		4C3FFE9121FA0BC80054DF35 /* PropertySummaryEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3FFE9021FA0BC80054DF35 /* PropertySummaryEditCell.swift */; };
 		4C3FFE9321FA0C030054DF35 /* PropertySummaryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3FFE9221FA0C030054DF35 /* PropertySummaryViewCell.swift */; };
+		4C77D829220149A4001F9444 /* C2CRadioButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C77D828220149A4001F9444 /* C2CRadioButtonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		4C3FFE8E21F910890054DF35 /* String+Clear2Close.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Clear2Close.swift"; sourceTree = "<group>"; };
 		4C3FFE9021FA0BC80054DF35 /* PropertySummaryEditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySummaryEditCell.swift; sourceTree = "<group>"; };
 		4C3FFE9221FA0C030054DF35 /* PropertySummaryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySummaryViewCell.swift; sourceTree = "<group>"; };
+		4C77D828220149A4001F9444 /* C2CRadioButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C2CRadioButtonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 				4C3FFE8121F022260054DF35 /* DealsService.swift */,
 				4C3FFE8321F022380054DF35 /* AnalysisService.swift */,
 				3A8E868C2200A5DA00CDA275 /* C2CKeyboardService.swift */,
+				4C77D828220149A4001F9444 /* C2CRadioButtonViewModel.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C77D829220149A4001F9444 /* C2CRadioButtonViewModel.swift in Sources */,
 				4C3FFE8021F021FE0054DF35 /* PropertyAnalysisSummaryViewController.swift in Sources */,
 				3A4DB0E021F657BB00CCD049 /* CreatePropertyTypeViewController.swift in Sources */,
 				4C3FFE4E21EFE4840054DF35 /* PropertySummaryViewController.swift in Sources */,
