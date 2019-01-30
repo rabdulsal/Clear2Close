@@ -33,19 +33,22 @@ class CreatePropertyTypeViewController : UIViewController {
     
     var property: C2CProperty!
     var propertySegue: PropertySegueID!
+    private var radioButtonsVM: C2CRadioButtonViewModel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.radioButtonsVM = C2CRadioButtonViewModel([self.rentalButton, self.flipButton])
+    }
     
-    @IBAction func pressedRentalButton(_ sender: Any) {
+    @IBAction func pressedRentalButton(_ sender: CircularButton) {
         self.propertySegue = .Rental
-        self.rentalButton.toggleSelected()
+        self.radioButtonsVM.selectButton(sender.tag)
     }
     
-    @IBAction func pressedFlipButton(_ sender: Any) {
+    @IBAction func pressedFlipButton(_ sender: CircularButton) {
         self.propertySegue = .Flip
-        self.flipButton.toggleSelected()
+        self.radioButtonsVM.selectButton(sender.tag)
     }
-    
-    
     
     @IBAction func pressedContinueButton(_ sender: Any) {
         /*

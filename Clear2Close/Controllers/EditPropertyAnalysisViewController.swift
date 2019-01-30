@@ -30,10 +30,12 @@ class EditRentalAnalysisViewController : UIViewController {
     var property: C2CProperty!
     var deal: C2CDeal!
     var fundingSource: C2CDeal.FundingSource = .HardMoney
+    private var radioButtonVM: C2CRadioButtonViewModel!
     
     override func viewDidLoad() {
         self.title = self.property.propertyType.rawValue
         self.propertyAddress.text = self.property.address
+        self.radioButtonVM = C2CRadioButtonViewModel([self.hardMoneyButton, self.privateMoneyButton, self.cashButton])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,19 +46,19 @@ class EditRentalAnalysisViewController : UIViewController {
     
     // MARK: ACTIONS
     
-    @IBAction func pressedHardMoney(_ sender: Any) {
+    @IBAction func pressedHardMoney(_ sender: CircularButton) {
         self.fundingSource = .HardMoney
-        self.hardMoneyButton.toggleSelected()
+        self.radioButtonVM.selectButton(sender.tag)
     }
     
-    @IBAction func pressedPrivate(_ sender: Any) {
+    @IBAction func pressedPrivate(_ sender: CircularButton) {
         self.fundingSource = .Private
-        self.privateMoneyButton.toggleSelected()
+        self.radioButtonVM.selectButton(sender.tag)
     }
     
-    @IBAction func pressedCash(_ sender: Any) {
+    @IBAction func pressedCash(_ sender: CircularButton) {
         self.fundingSource = .Cash
-        self.cashButton.toggleSelected()
+        self.radioButtonVM.selectButton(sender.tag)
     }
     
     
