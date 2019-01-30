@@ -56,7 +56,7 @@ extension MyPropertiesViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let deal = C2CDealsService.getDealForIndexPath(indexPath) else { return UITableViewCell() }
         let cell = self.myPropertiesTableView.dequeueReusableCell(withIdentifier: Identifiers.DealsID.rawValue, for: indexPath)
-        cell.textLabel?.text = deal.property.address
+        cell.textLabel?.text = deal.address
         
         return cell
     }

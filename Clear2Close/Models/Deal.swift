@@ -24,7 +24,9 @@ class C2CDeal {
     var interestRate: Double
     var points: Double
     var terms: Int
-    
+    var address: String {
+        return self.property.address
+    }
     
     init(
         property: C2CProperty,

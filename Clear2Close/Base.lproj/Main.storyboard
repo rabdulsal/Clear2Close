@@ -682,8 +682,27 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H28-8J-mqd">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="OzZ-cu-yhk" userLabel="Header View">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Property Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fo-iI-hGa">
+                                            <rect key="frame" x="60" y="25" width="255" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="6Fo-iI-hGa" secondAttribute="bottom" constant="25" id="H0s-EM-9nG"/>
+                                        <constraint firstItem="6Fo-iI-hGa" firstAttribute="top" secondItem="OzZ-cu-yhk" secondAttribute="top" constant="25" id="UGQ-TN-XB1"/>
+                                        <constraint firstAttribute="trailing" secondItem="6Fo-iI-hGa" secondAttribute="trailing" constant="60" id="eBj-tu-fWv"/>
+                                        <constraint firstItem="6Fo-iI-hGa" firstAttribute="leading" secondItem="OzZ-cu-yhk" secondAttribute="leading" constant="60" id="kzz-hC-EYp"/>
+                                    </constraints>
+                                </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="cIy-a8-A9t" userLabel="Footer View">
-                                    <rect key="frame" x="0.0" y="132" width="375" height="90"/>
+                                    <rect key="frame" x="0.0" y="203" width="375" height="90"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4he-fx-JaC" customClass="PrimaryCTAButton" customModule="Clear2Close" customModuleProvider="target">
@@ -707,7 +726,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditCell" rowHeight="60" id="TjI-v5-XYN" customClass="PropertySummaryEditCell" customModule="Clear2Close" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="99" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TjI-v5-XYN" id="GYF-Bc-Q7I">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
@@ -740,7 +759,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ViewCell" id="JX4-sk-355" customClass="PropertySummaryViewCell" customModule="Clear2Close" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="159" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JX4-sk-355" id="RHc-lk-DoT">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -784,6 +803,7 @@
                         <viewLayoutGuide key="safeArea" id="ENX-d3-ojb"/>
                     </view>
                     <connections>
+                        <outlet property="propertyAddressLabel" destination="6Fo-iI-hGa" id="1W2-Bu-c5K"/>
                         <outlet property="summaryTableView" destination="H28-8J-mqd" id="3c8-st-ppV"/>
                     </connections>
                 </viewController>
@@ -793,6 +813,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5Oc-Vo-WsN"/>
+        <segue reference="qVC-as-IXY"/>
     </inferredMetricsTieBreakers>
 </document>

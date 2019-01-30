@@ -16,6 +16,7 @@ class PropertySummaryViewController: UIViewController {
     */
     
     @IBOutlet weak var summaryTableView : UITableView!
+    @IBOutlet weak var propertyAddressLabel: UILabel!
     
     var deal: C2CDeal!
     var analysisService: C2CAnalysisService!
@@ -30,6 +31,7 @@ class PropertySummaryViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.summaryTableView.dataSource = self
+        self.propertyAddressLabel.text = self.deal.address
         self.analysisService = C2CAnalysisService.init(deal: self.deal, tableView: self.summaryTableView)
         self.keyboardService = C2CKeyboardService(self.summaryTableView)
     }
