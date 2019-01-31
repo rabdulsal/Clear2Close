@@ -17,7 +17,7 @@ class GroupedDeal {
     var title: String; var dealsGroup = Array<C2CDeal>()
     
     init(_ deal: C2CDeal) {
-        self.title = deal.property.propertyType.rawValue; self.dealsGroup.append(deal)
+        self.title = deal.propertyType.rawValue; self.dealsGroup.append(deal)
     }
 }
 
@@ -26,10 +26,9 @@ class C2CDealsService {
     static var allDeals = Array<C2CDeal>()
     
     static func saveDealToCache(_ deal: C2CDeal) {
+        self.allDeals.append(deal)
         // Update Deals Hash
         self.updateDealsHash(with: deal)
-        
-        
     }
     
     // DataSource Management for TableView
@@ -61,7 +60,7 @@ private extension C2CDealsService {
     static var dealsTitleHash = Dictionary<String,Int>()
     
     static func updateDealsHash(with deal: C2CDeal) {
-        let propType = deal.property.propertyType.rawValue
+        let propType = deal.propertyType.rawValue
         if
             let dealInt = dealsTitleHash[propType],
             let dealsGroup = dealsHash[dealInt]

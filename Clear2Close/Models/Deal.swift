@@ -27,6 +27,9 @@ class C2CDeal {
     var address: String {
         return self.property.address
     }
+    var propertyType: C2CProperty.PropertyType {
+        return self.property.propertyType
+    }
     
     init(
         property: C2CProperty,

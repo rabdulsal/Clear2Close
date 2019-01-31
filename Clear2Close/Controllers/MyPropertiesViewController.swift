@@ -19,10 +19,21 @@ class MyPropertiesViewController : UIViewController {
     
     @IBOutlet weak var myPropertiesTableView: UITableView!
     
+    var searchController: UISearchController!
+    private var filteredDeals = Array<C2CDeal>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.myPropertiesTableView.dataSource = self
         self.myPropertiesTableView.delegate = self
+        
+        // SearchController
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        definesPresentationContext = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,20 +53,27 @@ class MyPropertiesViewController : UIViewController {
 extension MyPropertiesViewController : UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return C2CDealsService.numberOfSections
+        return self.searchInProgress ? 1 : C2CDealsService.numberOfSections
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return C2CDealsService.getSectionTitle(section)
+        return self.searchInProgress ? nil : C2CDealsService.getSectionTitle(section)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return C2CDealsService.numberOfDealsForSection(section)
+        return self.searchInProgress ? self.filteredDeals.count : C2CDealsService.numberOfDealsForSection(section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let deal = C2CDealsService.getDealForIndexPath(indexPath) else { return UITableViewCell() }
+       
         let cell = self.myPropertiesTableView.dequeueReusableCell(withIdentifier: Identifiers.DealsID.rawValue, for: indexPath)
+        let deal: C2CDeal
+        if self.searchInProgress {
+            deal = self.filteredDeals[indexPath.row]
+        } else {
+             guard let _deal = C2CDealsService.getDealForIndexPath(indexPath) else { return UITableViewCell() }
+            deal = _deal
+        }
         cell.textLabel?.text = deal.address
         
         return cell
@@ -66,8 +84,21 @@ extension MyPropertiesViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let deal = C2CDealsService.getDealForIndexPath(indexPath)
+        let deal: C2CDeal
+        if self.searchInProgress {
+            deal = self.filteredDeals[indexPath.row]
+        } else {
+            guard let _deal = C2CDealsService.getDealForIndexPath(indexPath) else { return }
+            deal = _deal
+        }
         self.performSegue(withIdentifier: Identifiers.SegueID.rawValue, sender: deal)
+    }
+}
+
+// MARK: - SearchController
+extension MyPropertiesViewController : UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        self.filterContents(of: searchController.searchBar.text!)
     }
 }
 
@@ -76,5 +107,14 @@ private extension MyPropertiesViewController {
     enum Identifiers : String {
         case SegueID = "PropSummaryID"
         case DealsID = "DealsCell"
+    }
+    
+    var searchInProgress: Bool {
+        return searchController.isActive && searchController.searchBar.text?.isEmpty == false
+    }
+    
+    func filterContents(of searchText: String) {
+        self.filteredDeals = C2CDealsService.allDeals.filter { $0.address.lowercased().contains(searchText.lowercased()) }
+        self.myPropertiesTableView.reloadData()
     }
 }
