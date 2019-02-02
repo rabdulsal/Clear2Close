@@ -11,9 +11,9 @@ import Foundation
 class C2CDeal {
     
     enum FundingSource : String {
-        case HardMoney = "hardmoney"
-        case Private   = "private"
-        case Cash      = "cash"
+        case HardMoney = "Hard Money"
+        case Private   = "Private"
+        case Cash      = "Cash"
     }
     
     var property: C2CProperty
@@ -49,5 +49,21 @@ class C2CDeal {
         self.interestRate  = interest
         self.points        = points
         self.terms         = terms
+    }
+    
+    init(storedDeal: C2CStoredDeal) {
+        // Vars
+        let propType       = storedDeal.propertyType ?? ""
+        let propertyType   = C2CProperty.PropertyType(rawValue: propType) ?? .Rental
+        let source         = storedDeal.fundingSource ?? ""
+        // Stored Props
+        self.purchasePrice = storedDeal.purchasePrice
+        self.rehab         = storedDeal.rehab
+        self.appraisalARV  = storedDeal.appraisalARV
+        self.fundingSource = FundingSource(rawValue: source) ?? .HardMoney
+        self.interestRate  = storedDeal.interestRate
+        self.points        = storedDeal.points
+        self.terms         = Int(storedDeal.terms)
+        self.property      = C2CProperty(address: storedDeal.address ?? "", propertyType: propertyType)
     }
 }

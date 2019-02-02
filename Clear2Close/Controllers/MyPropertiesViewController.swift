@@ -26,6 +26,7 @@ class MyPropertiesViewController : UIViewController {
         super.viewDidLoad()
         self.myPropertiesTableView.dataSource = self
         self.myPropertiesTableView.delegate = self
+        C2CDealsService.loadDealsData()
         
         // SearchController
         searchController = UISearchController(searchResultsController: nil)

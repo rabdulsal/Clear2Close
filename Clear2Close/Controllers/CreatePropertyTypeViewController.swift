@@ -56,18 +56,18 @@ class CreatePropertyTypeViewController : UIViewController {
          2. Perform segue
         */
         guard let address = addressField.text else { return }
-        var propertyType: C2CProperty.PropertyType?
+        var propertyType: C2CProperty.PropertyType
         var identifier: String?
         
         switch self.propertySegue! {
         case .Rental:
             
             propertyType = C2CProperty.PropertyType.Rental
-            self.property = C2CProperty(address: address, propertyType: propertyType!)
+            self.property = C2CProperty(address: address, propertyType: propertyType)
             identifier = PropertySegueID.Rental.rawValue
         case .Flip:
             propertyType = C2CProperty.PropertyType.Flip
-            self.property = C2CProperty(address: address, propertyType: propertyType!)
+            self.property = C2CProperty(address: address, propertyType: propertyType)
             identifier = PropertySegueID.Flip.rawValue
         }
         self.performSegue(withIdentifier: identifier!, sender: nil)
